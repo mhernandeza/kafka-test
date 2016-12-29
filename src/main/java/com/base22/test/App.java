@@ -6,7 +6,9 @@ package com.base22.test;
 public class App {
 	public static void main( String[] args ) {
 		MyKafkaProducer producer = new MyKafkaProducer();
-		producer.runProducer();
+		MyKafkaConsumer consumer = new MyKafkaConsumer();
+		consumer.runConsumer();
+//		producer.runProducer();
 
 	}
 
