@@ -5,7 +5,7 @@ import org.apache.kafka.clients.consumer.ConsumerRecords;
 import org.apache.kafka.clients.consumer.KafkaConsumer;
 import org.apache.kafka.common.errors.WakeupException;
 
-import java.util.Arrays;
+// import java.util.Arrays;
 import java.util.List;
 import java.util.Properties;
 
@@ -56,7 +56,7 @@ public class MyKafkaConsumer implements Runnable {
 			consumer.subscribe( this.topics );
 
 			while ( true ) {
-				ConsumerRecords<String, String> records = consumer.poll( 1000 );
+				ConsumerRecords<String, String> records = consumer.poll( Long.MAX_VALUE );
 				for ( ConsumerRecord<String, String> record : records )
 					System.out.printf( "%d : offset = %d, key = %s, value = %s%n", id, record.offset(), record.key(), record.value() );
 			}
