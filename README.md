@@ -8,7 +8,10 @@ Simple code to run a Kafka producer and a couple of Kafka consumers in parallel.
 2. Start a Zookeeper server.
 3. Start a Kafka server.
 4. Create a topic in your Kafka broker with 2 partitions called "javatest".
+
 ``> bin/kafka-topics.sh --create --zookeeper localhost:2181 --replication-factor 1 --partitions 2 --topic javatest``
+
+For more details go to https://kafka.apache.org/quickstart
 
 #What to expect
 
